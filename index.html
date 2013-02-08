@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blabble Chrome Example</title>
+	<link href="./css/bootstrap.min.css" rel="stylesheet" />
+	<link href="./css/site.css" rel="stylesheet" />
+	<script language="javascript" src="./js/jquery.min.js"></script>
+	<script language="javascript" src="./js/bootstrap.min.js"></script>
+	<script language="javascript" src="./js/blabble.js"></script>
+</head>
+<body>
+    <embed id="softphonePlugin" type="application/x-blabble" onload="phoneOnLoad" logging="false">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<img class="brand-logo" src="./img/icon_128.png" /> 
+				<a class="brand" href="#">
+					Blabble Chrome Example</a>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="accountSettings well span5">
+				<h3>Account Settings</h3>
+				<form class="form-horizontal">
+					<div class="control-group">
+						<label for="status" class="control-label">Status:</label>
+						<div class="controls">
+							<span class="control-text" id="status">Not Connected</span>
+						</div>
+					</div>
+					<div id="connectionInfo">
+						<div class="control-group">
+							<label for="server" class="control-label">Server:</label>
+							<div class="controls">
+								<input type="text" id="server" value="" />
+							</div>
+						</div>
+						<div class="control-group">
+							<label for="user" class="control-label">User:</label>
+							<div class="controls">
+								<input type="text" id="user" value="" />
+							</div>
+						</div>
+						<div class="control-group">
+							<label for="pass" class="control-label">Password:</label>
+							<div class="controls">
+								<input type="password" id="pass" value="" />
+							</div>
+						</div>
+						<div class="connectButton control-group">
+							<div class="controls">
+								<button id="connect" class="btn btn-primary">Connect</button>
+							</div>
+						</div>
+					</div>
+					<div id="disconnectBlock" class="connectButton control-group" style="display:none;">
+						<div class="controls">
+							<button id="disconnect" class="btn btn-danger">Disconnect</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="softphone well span5" style="margin-left:50px">
+				<form class="form-horizontal">
+					<div class="control-group">
+						<label for="status" class="control-label">Current Call:</label>
+						<div class="controls">
+							<span class="control-text" id="callInfo">None</span>
+						</div>
+					</div>
+					<div class="control-group">
+						<label for="user" class="control-label">sip:</label>
+						<div class="controls">
+							<div class="input-append">
+								<input type="text" id="dialBox" class="input-medium" autocomplete="off" />
+								<button class="btn" id="dial"><span class="phone-icon dial-icon"></span></button>
+								<button class="btn" id="hangup"><span class="phone-icon hangup-icon"></span></button>
+							</div>
+							
+							<div class="dial-pad-container dropdown">
+								<a class="btn" id="expand-dialpad" data-target="#" data-toggle="dropdown"><i class="icon-chevron-right"></i></a>
+								<div class="dial-pad dropdown-menu">
+									<div class="dial-row">
+										<button class="btn btn-small" id="dial-1">1<div class="dial-letters">&nbsp;</div></button>
+										<button class="btn btn-small" id="dial-2">2<div class="dial-letters">abc</div></button>
+										<button class="btn btn-small" id="dial-3">3<div class="dial-letters">def</div></button>
+									</div>
+									<div class="dial-row">
+										<button class="btn btn-small" id="dial-4">4<div class="dial-letters">ghi</div></button>
+										<button class="btn btn-small" id="dial-5">5<div class="dial-letters">jkl</div></button>
+										<button class="btn btn-small" id="dial-6">6<div class="dial-letters">mno</div></button>
+									</div>
+									<div class="dial-row">
+										<button class="btn btn-small" id="dial-7">7<div class="dial-letters">pqrs</div></button>
+										<button class="btn btn-small" id="dial-8">8<div class="dial-letters">tuv</div></button>
+										<button class="btn btn-small" id="dial-9">9<div class="dial-letters">wxyz</div></button>
+									</div>
+									<div class="dial-row">
+										<button class="btn btn-small" id="dial-star">*</button>
+										<button class="btn btn-small" id="dial-0">0</button>
+										<button class="btn btn-small" id="dial-pound">#</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="incomingCall" class="modal hide fade" data-backdrop="static" data-keyboard="false">
+		<div class="modal-header">
+			<h3>Incoming call</h3>
+		</div>
+		<div class="modal-body">
+			<p>From: <span id="incomingCID"></span></p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn" id="rejectIncoming">Reject</a>
+			<a href="#" class="btn btn-primary" id="answerIncoming">Answer</a>
+		</div>
+	</div>
+</body>
+</html>

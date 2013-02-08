@@ -1,0 +1,100 @@
+#softphonePlugin {
+	margin-left: -999999px;
+	position: absolute;
+}
+body {
+	margin:0;
+	font-family:Helvetica,Arial,sans-serif;
+	font-size:13px;
+	line-height:18px;
+	color:#333333;
+	background-color:#ffffff;
+	padding-top: 60px;
+}
+#dialBoxDiv {
+	padding-top: 10px;
+}
+.brand-logo {	
+	height: 32px;
+	float:left;
+	margin-right:5px;
+	margin-top:3px;
+}
+.navbar  a.brand, .nvarbar a.brand:hover {
+	color: white;
+}
+.controls .control-text {
+	color: #595959;
+	line-height:30px;
+}
+.well form .control-group {
+	margin-bottom: 5px;
+}
+.well form .control-group .control-label {
+	width: 100px;
+}
+.well form .control-group .controls {
+	margin-left: 110px;
+}
+.well {
+	padding: 10px;
+}
+.well h3 {
+	margin-top: 0px;
+	line-height: normal;
+}
+#dial {
+	padding: 2px 8px;
+}
+#hangup {
+	padding: 2px 8px;
+	display: none;
+}
+.phone-icon {
+	height: 24px;
+	width: 24px;
+	display: inline-block;
+	vertical-align: top;
+}
+.dial-icon {
+	background-image: url(../img/dial.png);
+}
+.hangup-icon {
+	background-image: url(../img/hangup.png);
+}
+.hold-icon {
+	background-image: url(../img/hold.png);
+}
+#expand-dialpad {
+	vertical-align: bottom;
+	padding: 1px 4px;
+	margin-left: 5px;
+}
+.dial-pad .dial-row button
+{
+	height: 34px;
+	width: 34px;
+	padding-left: 0px;
+	padding-right: 0px;
+	text-align: center;
+	line-height: 12px;
+}
+.dial-pad .dial-row button .dial-letters
+{
+	font-size: .9em;
+}
+.dial-pad .dial-row {
+	margin-bottom: 5px;
+}
+.dial-pad {
+	min-width: 135px;
+}
+.dial-pad-container {
+	text-align: center;
+	display: inline-block;
+	line-height: 30px;
+}
+.softphone {
+	display: none;
+	margin-left:50px;
+}

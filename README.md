@@ -1,4 +1,4 @@
-Blabble-example
+Blabble Google Chrome Extension
 ===============
 
-Example Google Chrome extension for Blabble
+This repository contains a sample Google Chrome extension for the Blabble plugin.  For more info see [http://blabblephone.com][].

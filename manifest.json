@@ -1,0 +1,18 @@
+{
+  "name": "BlabblePhone",
+  "version": "1.0.0.0",
+  "manifest_version": 2,
+  "description": "BlabblePhone Plugin",
+  "app": {
+	"launch": {
+		"local_path": "index.html"
+	}
+  },
+  "icons": {
+	"16": "icon_16.png",
+	"128": "icon_128.png"
+  },
+  "plugins": [{ "path": "npBlabble.dll", "public": false },
+		{ "path": "Blabble.plugin", "public": false },
+		{ "path": "npBlabble.so", "public": false }]
+}
